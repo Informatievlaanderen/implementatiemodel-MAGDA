@@ -1,0 +1,33 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus> a skos:ConceptScheme;
+<https://www.w3.org/ns/adms#status> <https://data.vlaanderen.be/id/concept/MAGDAStatus/ingebruik>;
+  skos:definition "De mogelijke statussen van keuzelijsten en keuzelijst-opties."@nl;
+  skos:prefLabel "ADMS keuzelijst status"@nl.
+
+<https://data.vlaanderen.be/id/concept/MAGDAStatus/ingebruik> a skos:Concept;
+<https://www.w3.org/ns/adms#status> <https://data.vlaanderen.be/id/concept/MAGDAStatus/ingebruik>;
+  skos:definition "De keuzelijst of optie is actief. Deze keuzelijst of optie kan aangeleverd worden."@nl;
+  skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus>;
+  skos:notation "ingebruik";
+  skos:prefLabel "In gebruik"@nl;
+  skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus> .
+
+<https://data.vlaanderen.be/id/concept/MAGDAStatus/uitgebruik> a skos:Concept;
+<https://www.w3.org/ns/adms#status> <https://data.vlaanderen.be/id/concept/MAGDAStatus/ingebruik>;
+  skos:definition "De keuzelijst of optie is actief. De keuzelijst of optie mag aangeleverd worden maar is niet meer aangewezen om te gebruiken."@nl;
+  skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus>;
+  skos:notation "uitgebruik";
+  skos:prefLabel "Uit gebruik"@nl;
+  skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus> .
+
+<https://data.vlaanderen.be/id/concept/MAGDAStatus/verwijderd> a skos:Concept;
+<https://www.w3.org/ns/adms#status> <https://data.vlaanderen.be/id/concept/MAGDAStatus/ingebruik>;
+  skos:definition "De keuzelijst of optie is inactief en niet meer beschikbaar voor aanlevering."@nl;
+  skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus>;
+  skos:notation "verwijderd";
+  skos:prefLabel "verwijderd"@nl;
+  skos:topConceptOf <https://data.vlaanderen.be/id/conceptscheme/MAGDAStatus> .
